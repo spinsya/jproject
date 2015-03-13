@@ -9,7 +9,7 @@
 <body>
 <font color="red">
 <%
-	out.print("Hello");
+	out.print("Hello"); // 아웃객체에 있는 프린트 메소드
 %>
 </font>
 
