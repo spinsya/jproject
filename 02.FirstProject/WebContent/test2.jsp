@@ -25,6 +25,9 @@
 </form>
 
 <hr>
+
+
+
 <h1>JSP</h1>
 <form method="get" action="test3.jsp"> 
 	이름 : <input type="text" name="name"><br>

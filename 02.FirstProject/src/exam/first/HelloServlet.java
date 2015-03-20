@@ -50,6 +50,7 @@ public class HelloServlet extends HttpServlet {
 		// TODO Auto-generated method stub //post방식은 저장이 안됌
 		request.setCharacterEncoding("UTF-8");
 		response.setContentType("text/html; charset=UTF-8");
+	
 		
 		PrintWriter out = response.getWriter();
 		

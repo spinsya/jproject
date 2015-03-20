@@ -7,6 +7,7 @@
     	request.setCharacterEncoding("UTF-8");
 		response.setContentType("text/html; charset=UTF-8");
     	
+		
     	String name = request.getParameter("name"); //request = 내장객체, response
     	String id = request.getParameter("id");
 		String password = request.getParameter("pwd");
