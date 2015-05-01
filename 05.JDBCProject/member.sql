@@ -11,22 +11,19 @@ create table member
 	id			varchar2(15)	primary key,
 	password	varchar2(10),
 	name		varchar2(20),
-	age			number,
 	gender		char(1),
+	age			number,
 	addr		varchar2(100),
 	regdate		date			default sysdate
 )
 
 select * from member
+where id='test'
 
 insert into member
-values('rhfejqjrm123', '1234', '의진공주', 22, '1', '서울시', '2015-04-17')
+values('test1', '1234', '의진공주', 22, '1', '서울시', '2015-04-17')
 
 drop table member
 
 update member
 set addr = '응암동'
-where id = 'rhfejqjrm123'
-
-delete member
-where id = 'rhfejqjrm123'
