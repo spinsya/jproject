@@ -67,15 +67,19 @@ public class ListServlet extends HttpServlet {
 			ResultSet rs = pstmt.executeQuery();
 			
 			out.print("<table border=1>");
+			out.print("<tr>");
+			out.print("<th>아이디</th><th>이름</th><th>나이</th><th>성별</th><th>주소</th>");
+			
 			while(rs.next() == true) {
 				
 				out.print("<tr>");
 				
-				out.print("<td>" + rs.getString("id") + "</td>");
+				out.print("<td><a href='view?id=" + rs.getString("id") +"'>" + rs.getString("id")+ "</a></td>");
 				out.print("<td>" + rs.getString("name") + "</td>");
 				out.print("<td>" + rs.getInt("age") + "</td>");
 				out.print("<td>" + rs.getString("gender") + "</td>");
 				out.print("<td>" + rs.getString("addr") + "</td>");
+			
 				
 				out.print("</tr>");
 			}

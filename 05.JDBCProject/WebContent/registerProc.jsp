@@ -34,13 +34,15 @@
     pstmt.setString(1, id);
     pstmt.setString(2, pwd);
     pstmt.setString(3, name);
-    pstmt.setString(5, gender);
-    pstmt.setInt(4, Integer.parseInt(age));
+    pstmt.setString(4, gender);
+    pstmt.setInt(5, Integer.parseInt(age));
     pstmt.setString(6, addr);
     
     int result = pstmt.executeUpdate(); // 실행
     
-    out.print("가입완료");
+    if(result == 1)
+    	response.sendRedirect("list"); //1일때 바로 리스트로 
+    
     // 4. 데이터베이스와 연결 끊음
     pstmt.close();
     //stmt.close();
